@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { GameMetadata } from '../types';
+import { GameMetadata } from '../types.ts';
 
 const GAMES_LIST: GameMetadata[] = [
   {
@@ -55,14 +54,12 @@ const GAMES_LIST: GameMetadata[] = [
   }
 ];
 
-// Define props for SectorButton to fix TS assignment errors
 interface SectorButtonProps {
   game: GameMetadata;
   active: boolean;
   onClick: () => void;
 }
 
-// SectorButton typed as React.FC to handle 'key' correctly
 const SectorButton: React.FC<SectorButtonProps> = ({ game, active, onClick }) => (
   <button
     onClick={onClick}
@@ -85,7 +82,6 @@ const GamePortal: React.FC = () => {
 
   return (
     <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* Header with return functionality if game is selected */}
       <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <h2 className="text-5xl font-black text-white mb-4 italic tracking-tighter uppercase">Game Portal</h2>
@@ -103,7 +99,6 @@ const GamePortal: React.FC = () => {
         )}
       </header>
 
-      {/* The "Like This" UI: Grid of Sector Pills */}
       <div className="flex flex-wrap gap-4 p-4 rounded-[2.5rem] bg-black/20 border border-white/5 backdrop-blur-sm">
         {GAMES_LIST.map((game) => (
           <SectorButton 
@@ -115,7 +110,6 @@ const GamePortal: React.FC = () => {
         ))}
       </div>
 
-      {/* Conditional Iframe Content */}
       <div className={`transition-all duration-500 transform ${selectedGame ? 'opacity-100 translate-y-0 h-[600px]' : 'opacity-0 translate-y-10 h-0 pointer-events-none'}`}>
         {selectedGame && (
           <div className="h-full flex flex-col space-y-4">

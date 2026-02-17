@@ -1,6 +1,5 @@
-
 import React, { useState, useRef, useEffect } from 'react';
-import { geminiService } from '../services/geminiService';
+import { geminiService } from '../services/geminiService.ts';
 
 interface Message {
   id: string;
@@ -54,7 +53,7 @@ const AiBuddy: React.FC = () => {
           <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[80%] p-4 rounded-3xl ${
               msg.sender === 'user' 
-                ? 'bg-purple-600 text-white rounded-br-none shadow-lg shadow-purple-600/20' 
+                ? 'bg-blue-600 text-white rounded-br-none shadow-lg shadow-blue-600/20' 
                 : 'bg-white/10 text-gray-100 rounded-bl-none border border-white/10 backdrop-blur-md'
             }`}>
               <p className="leading-relaxed">{msg.text}</p>
@@ -80,12 +79,12 @@ const AiBuddy: React.FC = () => {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSend()}
           placeholder="Ask Keke for a game or just chat..."
-          className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-16 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all backdrop-blur-md"
+          className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-6 pr-16 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all backdrop-blur-md"
         />
         <button
           onClick={handleSend}
           disabled={isLoading}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white text-black rounded-xl flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all duration-300 disabled:opacity-50"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white text-black rounded-xl flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 disabled:opacity-50"
         >
           <i className="fa-solid fa-paper-plane text-sm"></i>
         </button>

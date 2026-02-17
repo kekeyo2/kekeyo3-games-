@@ -1,12 +1,11 @@
-
 import React, { useState } from 'react';
-import StarBackground from './components/StarBackground';
-import Sidebar from './components/Sidebar';
-import CustomCursor from './components/CustomCursor';
-import Home from './pages/Home';
-import GamePortal from './pages/GamePortal';
-import AiBuddy from './pages/AiBuddy';
-import { TabType } from './types';
+import StarBackground from './components/StarBackground.tsx';
+import Sidebar from './components/Sidebar.tsx';
+import CustomCursor from './components/CustomCursor.tsx';
+import Home from './pages/Home.tsx';
+import GamePortal from './pages/GamePortal.tsx';
+import AiBuddy from './pages/AiBuddy.tsx';
+import { TabType } from './types.ts';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>(TabType.HOME);
