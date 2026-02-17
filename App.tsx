@@ -19,14 +19,6 @@ const App: React.FC = () => {
         return <GamePortal />;
       case TabType.AI_BUDDY:
         return <AiBuddy />;
-      case TabType.SETTINGS:
-        return (
-          <div className="flex flex-col items-center justify-center h-[60vh] text-center space-y-4">
-             <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center text-3xl">⚙️</div>
-             <h2 className="text-2xl font-bold text-white uppercase tracking-tighter">Configuration</h2>
-             <p className="text-gray-500 max-w-sm">Fine-tune your sensory perception within the Kekeyo Games environment. Audio and Visual calibrators coming soon.</p>
-          </div>
-        );
       default:
         return <Home onEnterPortal={() => setActiveTab(TabType.GAMES)} />;
     }

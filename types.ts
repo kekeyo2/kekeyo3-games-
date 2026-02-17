@@ -2,8 +2,7 @@
 export enum TabType {
   HOME = 'home',
   GAMES = 'games',
-  AI_BUDDY = 'ai_buddy',
-  SETTINGS = 'settings'
+  AI_BUDDY = 'ai_buddy'
 }
 
 export interface GameMetadata {

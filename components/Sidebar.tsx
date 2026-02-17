@@ -12,7 +12,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     { id: TabType.HOME, icon: 'fa-house', label: 'Dashboard' },
     { id: TabType.GAMES, icon: 'fa-gamepad', label: 'Game Portal' },
     { id: TabType.AI_BUDDY, icon: 'fa-robot', label: 'AI Oracle' },
-    { id: TabType.SETTINGS, icon: 'fa-gear', label: 'Config' },
   ];
 
   return (
