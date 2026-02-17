@@ -1,0 +1,8 @@
+{
+  "name": "Kekeyo Games: Cosmic Gaming Portal",
+  "description": "A high-fidelity gaming portal featuring a starry blackspace aesthetic, custom cursor effects, and AI-powered game discovery.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
